@@ -11,7 +11,9 @@ const projectRouter = require('./routes/projectRoutes');
 //***************DATABASE CONNECTION**********
 //********************************************
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fanuc');
+mongoose.connect(
+	'mongodb+srv://nandeepshah85:GgdEly5yBJumU5z1@cluster0.bpjbwaz.mongodb.net/FANUC?retryWrites=true&w=majority'
+);
 mongoose.connection.once('open', () => {
 	console.log('Connected to database');
 });
