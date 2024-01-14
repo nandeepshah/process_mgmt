@@ -17,12 +17,8 @@ const projectSchema = new mongoose.Schema({
 	startDate: {
 		type: Date,
 		required: true,
+		default: () => Date.now(),
 	},
-	endDate: {
-		type: Date,
-		required: true,
-	},
-	// You can add more fields as needed for your project
 });
 
 // Create the model
